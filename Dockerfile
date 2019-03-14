@@ -1,5 +1,4 @@
-FROM node:latest
-MAINTAINER Christian Lück <christian@lueck.tv>
+FROM node:lts-alpine
 
 RUN npm install -g json-server
 

@@ -10,6 +10,12 @@ if [ -f $file ]; then
     args="$args db.json"
 fi
 
+file=/data/routes.json
+if [ -f $file ]; then
+    echo "Found routes.json, trying to open"
+    args="$args -r routes.json"
+fi
+
 file=/data/file.js
 if [ -f $file ]; then
     echo "Found file.js seed file, trying to open"

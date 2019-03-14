@@ -1,0 +1,11 @@
+version: '3'
+services:
+  jsonservertest:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9002:80"
+    volumes:
+      - "$PWD/data-setup/jsonserver/db.json:/data/db.json"
+      - "$PWD/data-setup/jsonserver/routes.json:/data/routes.json"
