@@ -2,8 +2,6 @@
 
 args="$@"
 
-args="$@ -p 80"
-
 file=/data/db.json
 if [ -f $file ]; then
     echo "Found db.json, trying to open"
@@ -14,6 +12,12 @@ file=/data/routes.json
 if [ -f $file ]; then
     echo "Found routes.json, trying to open"
     args="$args -r routes.json"
+fi
+
+file=/data/json-server.json
+if [ -f $file ]; then
+    echo "Found json-server.json, trying to open"
+    args="$args -c json-server.json"
 fi
 
 file=/data/file.js
